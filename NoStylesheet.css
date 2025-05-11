@@ -1,0 +1,9 @@
+/* No Stylesheet */
+* {
+    caret-color: transparent;
+    transition: all 0.2s ease;
+}
+
+body {
+    background-color: white;
+}

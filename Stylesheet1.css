@@ -1,0 +1,163 @@
+/* Stylesheet 1 */
+* {
+    caret-color: transparent;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.2s ease;
+}
+
+body {
+    background-color: #D14838;
+    color: white;
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "main nav"
+        "aside aside"
+        "footer footer";
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr 2fr 1fr auto;
+}
+
+header {
+    font-size: x-large;
+    grid-area: header;
+    padding: 10px;
+}
+
+header h1 {
+    margin: 0 auto;
+}
+
+nav {
+    align-items: flex-start;
+    background-color: white;
+    color: black;
+    display: flex;
+    grid-area: nav;
+    justify-content: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin-block-start: 0;
+    padding: 0px;
+}
+
+nav li {
+    background-color: #D14838;
+    border: 1px solid #D14838;
+    border-radius: 30px;
+    color: white;
+    cursor: pointer;
+    margin: 10px;
+    padding: 3px 50px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+nav li:hover,
+nav li.active {
+    background-color: white;
+    color: #D14838;
+    transition: all 0.3s ease;
+}
+
+main {
+    background-color: white;
+    color: black;
+    grid-area: main;
+    padding: 10px;
+}
+
+main h1,
+main h2 {
+    color: #D14838;
+}
+
+main a {
+    color: #D14838;
+    text-decoration: none;
+}
+
+main a:hover {
+    color: #ff3f3f;
+}
+
+aside {
+    background-color: antiquewhite;
+    color: #D14838;
+    grid-area: aside;
+    padding: 10px;
+}
+
+footer {
+    grid-area: footer;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+    body {
+        grid-template-areas:
+            "header"
+            "nav"
+            "main"
+            "aside"
+            "footer";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    nav ul {
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav li {
+        margin: 5px;
+        padding: 5px 15px;
+    }
+
+    main,
+    aside {
+        padding: 15px;
+    }
+}
+
+/* Phones */
+@media (max-width: 480px) {
+    header {
+        font-size: large;
+        text-align: center;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    nav ul {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    nav li {
+        border-radius: 15px;
+        margin: 5px 0;
+        padding: 8px 20px;
+        width: 80%;
+    }
+
+    main,
+    aside,
+    footer {
+        font-size: 0.9em;
+        padding: 10px;
+    }
+}
